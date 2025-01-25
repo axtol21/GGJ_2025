@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     [field: SerializeField] public float playerDamage { get; set; } = 1.0f;
     [field: SerializeField] public float maxTime { get; set; } = 20f;
     [field: SerializeField] public float addTime { private get; set; }
-    [field: SerializeField] public float attackSpeed { get; set; } = 5f;
+    [field: SerializeField] public float attackSpeed { get; set; } = 1f;
     [field: SerializeField] public bool canAttack { get; private set; } = true;
 
     private void Awake()
@@ -37,8 +37,6 @@ public class Player : MonoBehaviour
             StartCoroutine(UpdateAttack());
         }
 
-        Debug.Log(canAttack);
-
         if (playerHealth <= 0)
         {
             PlayerDead();
@@ -52,7 +50,6 @@ public class Player : MonoBehaviour
 
     private IEnumerator UpdateAttack ()
     {
-        Debug.Log("Here");
         yield return new WaitForSeconds(attackSpeed);
         canAttack = true; 
     }
