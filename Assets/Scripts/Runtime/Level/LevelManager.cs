@@ -47,6 +47,8 @@ public class LevelManager : MonoBehaviour
             Round %= Instance.levels.Count;
             EndlessLoop++;
         }
+
+        // Reset player time limit
         Instance.levels[Round].RunLevel();
     }
 

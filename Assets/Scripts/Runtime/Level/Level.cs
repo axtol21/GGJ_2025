@@ -36,7 +36,7 @@ public class Level : ScriptableObject
 public class LevelStep
 {
     [SerializeField] private float time;
-    [SerializeField] private LevelEvent levelEvent;
+    [SerializeField] private _LevelEvent levelEvent;
 
     public IEnumerator LevelStepRoutine()
     {
