@@ -140,6 +140,7 @@ MonoBehaviour:
   time: 1
   collider: {fileID: 7321613720951478124}
   renderer: {fileID: 0}
+  playerPrefab: {fileID: 6053237925694606601, guid: fe6619eb5593a674ba2ce64e8f36c335, type: 3}
 --- !u!50 &6614527076591949644
 Rigidbody2D:
   serializedVersion: 5
