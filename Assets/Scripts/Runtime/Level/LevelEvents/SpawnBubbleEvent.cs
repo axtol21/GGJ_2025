@@ -24,6 +24,7 @@ public class SpawnBubbleEvent : _LevelEvent
 
         bubble.health = health;
         bubble.transform.localScale = new Vector3(size, size, 1);
+        bubble.transform.position = GameBounds.GetRandomPointInBounds(size);
 
         if (speed > 0)
         {
