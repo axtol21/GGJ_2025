@@ -1,16 +1,21 @@
-using Unity.VisualScripting;
 using System.Collections;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class Player : MonoBehaviour
 {
     public static Player Instance;
-    [field: SerializeField] public float playerHealth { get; set; } = 5.0f;
-    [field: SerializeField] public float playerDamage { get; set; } = 1.0f;
-    [field: SerializeField] public float maxTime { get; set; } = 20f;
-    [field: SerializeField] public float addTime { private get; set; }
-    [field: SerializeField] public float attackSpeed { get; set; } = 5f;
-    [field: SerializeField] public bool canAttack { get; private set; } = true;
+    public float MaxHealth { get; set; } = 100f;
+    public float CurrentHealth { get; set; }
+    public float AttackDamage { get; set; } = 1;
+    public float AttackSpeed { get; set; } = 1;
+    public float MaxTime { get; set; } = 20f;
+    public bool CanAttack { get; private set; } = true;
+
+
+    public float LastAttackTime { get; private set; }
+
+    private List<_Upgrade> upgrades = new List<_Upgrade>();
 
     private void Awake()
     {
@@ -19,42 +24,6 @@ public class Player : MonoBehaviour
             Destroy(Instance);
         }
         Instance = this;
+        CurrentHealth = MaxHealth;
     }
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-
-        if (Input.GetMouseButtonDown(0) && canAttack)
-        {
-            canAttack = false;
-            StartCoroutine(UpdateAttack());
-        }
-
-        Debug.Log(canAttack);
-
-        if (playerHealth <= 0)
-        {
-            PlayerDead();
-        }
-    }
-
-    void PlayerDead ()
-    {
-        Destroy(gameObject);
-    }
-
-    private IEnumerator UpdateAttack ()
-    {
-        Debug.Log("Here");
-        yield return new WaitForSeconds(attackSpeed);
-        canAttack = true; 
-    }
-
 }

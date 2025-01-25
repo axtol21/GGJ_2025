@@ -12,7 +12,7 @@ public class Bubble : MonoBehaviour
     public float time = 1.0f;
     [SerializeField] private new Collider2D collider;
     [SerializeField] private new SpriteRenderer renderer;
-    
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -26,27 +26,30 @@ public class Bubble : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
-
     }
 
     private IEnumerator TimeToPOP()
     {
         yield return new WaitForSeconds(time);
-        Player.Instance.playerHealth = Player.Instance.playerHealth - 1;
+        Player.Instance.CurrentHealth = Player.Instance.CurrentHealth - 1;
         Destroy(gameObject);
+
+        if (Player.Instance.CurrentHealth < 0)
+        {
+            // Game over
+        }
     }
 
     void OnMouseDown()
     {
-        if (Player.Instance.canAttack)
+        if (Time.time - Player.Instance.LastAttackTime > 1 / Player.Instance.AttackSpeed)
         {
-            ApplyDamage(1);
+            ApplyDamage(Player.Instance.AttackDamage);
         }
     }
 
-    protected virtual void ApplyDamage (float player_damage)
+    protected virtual void ApplyDamage(float damageAmount)
     {
-        health -= player_damage;
+        health -= damageAmount;
     }
 }
