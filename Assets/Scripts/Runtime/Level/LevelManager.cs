@@ -14,14 +14,11 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+        if (Instance != null)
         {
-            Instance = this;
+            Destroy(Instance);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
 
     public static void Reset()
