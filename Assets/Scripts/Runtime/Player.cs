@@ -1,3 +1,4 @@
+
 using System.Collections;
 using UnityEngine;
 using System.Collections.Generic;
@@ -26,4 +27,9 @@ public class Player : MonoBehaviour
         Instance = this;
         CurrentHealth = MaxHealth;
     }
+
+
+
+
+
 }
