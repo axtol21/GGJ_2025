@@ -15,4 +15,4 @@ MonoBehaviour:
   bubblePrefab: {fileID: 6781609605500789619, guid: 45f21c9749bc46a46b0d09d4007ce100, type: 3}
   health: 1
   size: 3
-  speed: 1
+  speed: 3

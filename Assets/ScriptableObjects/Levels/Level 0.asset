@@ -13,11 +13,13 @@ MonoBehaviour:
   m_Name: Level 0
   m_EditorClassIdentifier: 
   levelEvents:
-  - time: 0
+  - time: 2
     levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}
   - time: 2
     levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}
-  - time: 4
+  - time: 2
     levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}
-  - time: 6
+  - time: 2
     levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}
+  - time: 2
+    levelEvent: {fileID: 11400000, guid: bcf2843b7880f334dabd959774abcf88, type: 2}

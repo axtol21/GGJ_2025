@@ -9,10 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed64b39f1c197694b96b3e3cea375de6, type: 3}
-  m_Name: Basic_Slow_S2
+  m_Script: {fileID: 11500000, guid: 70e6b8007dab9b44189b372f5e2a94b7, type: 3}
+  m_Name: BubbleGroup_Mixed_1
   m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 6781609605500789619, guid: 45f21c9749bc46a46b0d09d4007ce100, type: 3}
-  health: 1
-  size: 2
-  speed: 3
+  levelEvents:
+  - {fileID: 11400000, guid: 425871077aba5da4da7c99567f0f3a4c, type: 2}
+  - {fileID: 11400000, guid: 24187d64b0f9af244bba34f0fbfdd7d3, type: 2}

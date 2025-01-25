@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpawnMultipleBubbles", menuName = "Scriptable Objects/Level Events/SpawnMultipleBubbles")]
+[CreateAssetMenu(fileName = "DoMultipleEvents", menuName = "Scriptable Objects/Level Events/DoMultipleEvents")]
 public class DoMultipleEvents : _LevelEvent
 {
     public List<_LevelEvent> levelEvents;

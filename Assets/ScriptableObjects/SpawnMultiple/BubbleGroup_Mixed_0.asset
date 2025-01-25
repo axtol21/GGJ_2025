@@ -10,9 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 70e6b8007dab9b44189b372f5e2a94b7, type: 3}
-  m_Name: BubbleGroup_0
+  m_Name: BubbleGroup_Mixed_0
   m_EditorClassIdentifier: 
   levelEvents:
-  - {fileID: 11400000, guid: 501b2ab041f499745be853087bb0f9e2, type: 2}
-  - {fileID: 11400000, guid: 501b2ab041f499745be853087bb0f9e2, type: 2}
-  - {fileID: 11400000, guid: 501b2ab041f499745be853087bb0f9e2, type: 2}
+  - {fileID: 11400000, guid: bd78f56f20df6ff4ba67b5ed7b7277eb, type: 2}
+  - {fileID: 11400000, guid: f2e3eba2a9fdf2d479a0b08437a92fec, type: 2}
