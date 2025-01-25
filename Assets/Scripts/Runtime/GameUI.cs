@@ -2,13 +2,16 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
-    void Awake()
-    {
-        
-    }
+    [SerializeField] private GameObject StartScreen;
+    [SerializeField] private GameObject GameScreen;
+    [SerializeField] private GameObject ShopScreen;
+    [SerializeField] private GameObject GameOverScreen;
 
-    void Update()
+    public void StartGame()
     {
-        
+        StartScreen.SetActive(false);
+        GameScreen.SetActive(true);
+
+        LevelManager.StartLevel();
     }
 }
