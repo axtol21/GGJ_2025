@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Basic_Stationary_S3
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 6781609605500789619, guid: 45f21c9749bc46a46b0d09d4007ce100, type: 3}
-  health: 1
+  health: 3
   size: 3
   speed: 0
+  damageToDeal: 1

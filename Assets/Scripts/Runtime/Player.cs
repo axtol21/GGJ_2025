@@ -29,8 +29,4 @@ public class Player : MonoBehaviour
         CurrentHealth = MaxHealth;
     }
 
-
-
-
-
 }

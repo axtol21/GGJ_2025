@@ -8,6 +8,7 @@ public class SpawnBubbleEvent : _LevelEvent
     [SerializeField] private float health;
     [SerializeField] private float size;
     [SerializeField] private float speed;
+    [SerializeField] private float damageToDeal;
 
     public override IEnumerator RunEvent()
     {
@@ -23,8 +24,12 @@ public class SpawnBubbleEvent : _LevelEvent
         // spawn bubble randomly within screen, randomize direction;
 
         bubble.health = health;
-        bubble.transform.localScale = new Vector3(size, size, 1);
+        bubble.damageToDeal = damageToDeal;
+        float scaleFactor = (GameBounds.Bounds.xMax - GameBounds.Bounds.xMin) / (GameBounds.Bounds.yMax - GameBounds.Bounds.yMin);
+        bubble.transform.localScale = new Vector3(size / scaleFactor, size / scaleFactor, 1);
         bubble.transform.position = GameBounds.GetRandomPointInBounds(size);
+
+        //
 
         if (speed > 0)
         {

@@ -10,6 +10,7 @@ public class Bubble : MonoBehaviour
     public float size = 1.0f;
     public float health = 1.0f;
     public float time = 1.0f;
+    public float damageToDeal = 1.0f;
     [SerializeField] private new Collider2D collider;
     [SerializeField] private new SpriteRenderer renderer;
 
@@ -31,12 +32,13 @@ public class Bubble : MonoBehaviour
     private IEnumerator TimeToPOP()
     {
         yield return new WaitForSeconds(time);
-        Player.Instance.CurrentHealth = Player.Instance.CurrentHealth - 1;
+        Player.Instance.CurrentHealth = Player.Instance.CurrentHealth - damageToDeal;
         Destroy(gameObject);
 
         if (Player.Instance.CurrentHealth < 0)
         {
             // Game over
+            Debug.Log("Game OVER!");
         }
     }
 
