@@ -134,12 +134,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5439a9394ad570548bbb47159128dfa4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  size: 2
-  health: 3
-  speed: 1
+  rb: {fileID: 6614527076591949644}
+  size: 1
+  health: 1
+  time: 1
   collider: {fileID: 7321613720951478124}
   renderer: {fileID: 0}
-  rb: {fileID: 6614527076591949644}
 --- !u!50 &6614527076591949644
 Rigidbody2D:
   serializedVersion: 5

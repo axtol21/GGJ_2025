@@ -1,11 +1,14 @@
+using System;
+using System.Collections;
 using UnityEngine;
 
 public class Bubble : MonoBehaviour
 {
     // Placeholders
     public Rigidbody2D rb;
-    public int size = 1;
-    public int health = 1;
+    public float size = 1.0f;
+    public float health = 1.0f;
+    public float time = 1.0f;
     [SerializeField] private new Collider2D collider;
     [SerializeField] private new SpriteRenderer renderer;
     
@@ -13,9 +16,10 @@ public class Bubble : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Debug.Log("Bubble Here!");
 
         this.transform.localScale = new Vector3(size, size, 1);
+
+        StartCoroutine(TimeToPOP());
 
     }
 
@@ -26,11 +30,18 @@ public class Bubble : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+
+    }
+
+    private IEnumerator TimeToPOP()
+    {
+        yield return new WaitForSeconds(time);
+        Destroy(gameObject);
     }
 
     void OnMouseDown ()
     {
-        Debug.Log("Clicked!!");
         health--;
     }
 }
