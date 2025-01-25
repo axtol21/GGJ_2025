@@ -14,14 +14,11 @@ public class LevelManager : MonoBehaviour
 
     void Awake()
     {
-        if (Instance == null)
+        if (Instance != null)
         {
-            Instance = this;
+            Destroy(Instance);
         }
-        else
-        {
-            Destroy(gameObject);
-        }
+        Instance = this;
     }
 
     public static void Reset()
@@ -42,6 +39,8 @@ public class LevelManager : MonoBehaviour
 
     public static void StartLevel()
     {
+        Debug.Log($"Starting Level {Round} Loop {EndlessLoop}");
+
         if (Round >= Instance.levels.Count)
         {
             Round %= Instance.levels.Count;
