@@ -20,7 +20,7 @@ public class SpawnBubbleEvent : _LevelEvent
         var bubble = bubbleObj.GetComponent<Bubble>();
 
         // set bubble health/etc;
-        // spawn bubble randomly within screen;
+        // spawn bubble randomly within screen, randomize direction;
 
         yield break;
     }
