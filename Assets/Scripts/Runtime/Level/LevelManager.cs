@@ -2,13 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+using Random = System.Random;
+
 public class LevelManager : MonoBehaviour
 {
     private static LevelManager Instance;
 
-    public static int Round { get; private set; }
-    public static int EndlessLoop { get; private set; }
+    [field: SerializeField] public static int Round { get; private set; }
+    [field: SerializeField] public static int EndlessLoop { get; private set; }
     public static int TotalBubbleCount { get; set; }
+    public static Random Random { get; private set; }
 
     [SerializeField] private List<Level> levels;
 
@@ -19,6 +22,7 @@ public class LevelManager : MonoBehaviour
             Destroy(Instance);
         }
         Instance = this;
+        Random = new Random();
     }
 
     public static void Reset()

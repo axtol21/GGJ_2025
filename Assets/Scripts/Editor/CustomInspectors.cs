@@ -53,3 +53,36 @@ public class LevelStepDrawer : PropertyDrawer
         return EditorGUIUtility.singleLineHeight;
     }
 }
+
+[CustomPropertyDrawer(typeof(WeightedEvent))]
+public class WeightedEventDrawer : PropertyDrawer
+{
+    public override void OnGUI(Rect position, SerializedProperty property, GUIContent label)
+    {
+        EditorGUI.BeginProperty(position, label, property);
+
+        // Get properties
+        SerializedProperty timeProp = property.FindPropertyRelative("weight");
+        SerializedProperty levelEventProp = property.FindPropertyRelative("levelEvent");
+
+        // Define column widths (make time column smaller)
+        float timeColumnWidth = position.width * 0.2f; // 30% of the width for the time column
+        float levelEventColumnWidth = position.width * 0.8f; // 70% for the levelEvent column
+        float spacing = 5f; // Spacing between columns
+
+        // Draw time field
+        Rect timeRect = new Rect(position.x, position.y, timeColumnWidth - spacing, EditorGUIUtility.singleLineHeight);
+        EditorGUI.PropertyField(timeRect, timeProp, GUIContent.none);
+
+        // Draw level event field
+        Rect levelEventRect = new Rect(position.x + timeColumnWidth + spacing, position.y, levelEventColumnWidth - spacing, EditorGUIUtility.singleLineHeight);
+        EditorGUI.PropertyField(levelEventRect, levelEventProp, GUIContent.none);
+
+        EditorGUI.EndProperty();
+    }
+
+    public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+    {
+        return EditorGUIUtility.singleLineHeight;
+    }
+}
