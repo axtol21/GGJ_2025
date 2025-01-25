@@ -14,8 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   levelEvents:
   - time: 0
-    levelEvent: {fileID: 11400000, guid: 7bce2f64ac60b394fb180ccd41269f85, type: 2}
+    levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}
   - time: 2
-    levelEvent: {fileID: 11400000, guid: 7bce2f64ac60b394fb180ccd41269f85, type: 2}
-  - time: 2
-    levelEvent: {fileID: 11400000, guid: 7bce2f64ac60b394fb180ccd41269f85, type: 2}
+    levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}
+  - time: 4
+    levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}
+  - time: 6
+    levelEvent: {fileID: 11400000, guid: 4e48279ae41a3b541b520cc6d10935c9, type: 2}

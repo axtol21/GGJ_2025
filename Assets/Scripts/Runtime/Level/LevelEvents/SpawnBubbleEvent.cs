@@ -11,7 +11,7 @@ public class SpawnBubbleEvent : _LevelEvent
 
     public override IEnumerator RunEvent()
     {
-        if (bubblePrefab.GetComponent<Bubble>() != null)
+        if (bubblePrefab.GetComponent<Bubble>() == null)
         {
             Debug.LogWarning($"Invalid bubble {bubblePrefab}.");
         }
@@ -21,6 +21,14 @@ public class SpawnBubbleEvent : _LevelEvent
 
         // set bubble health/etc;
         // spawn bubble randomly within screen, randomize direction;
+
+        bubble.health = health;
+        bubble.transform.localScale = new Vector3(size, size, 1);
+
+        if (speed > 0)
+        {
+            bubble.rb.linearVelocity = Random.insideUnitCircle.normalized * speed;
+        }
 
         yield break;
     }
