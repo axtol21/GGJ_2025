@@ -12,14 +12,10 @@ public class Bubble : MonoBehaviour
     public float time = 1.0f;
     [SerializeField] private new Collider2D collider;
     [SerializeField] private new SpriteRenderer renderer;
-    [SerializeField] private GameObject playerPrefab;
     
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
-        Player player = playerPrefab.GetComponent<Player>();
-
         StartCoroutine(TimeToPOP());
     }
 
@@ -37,13 +33,16 @@ public class Bubble : MonoBehaviour
     private IEnumerator TimeToPOP()
     {
         yield return new WaitForSeconds(time);
-        Player.playerHealth = Player.playerHealth - 1;
+        Player.Instance.playerHealth = Player.Instance.playerHealth - 1;
         Destroy(gameObject);
     }
 
-    void OnMouseDown ()
+    void OnMouseDown()
     {
-        ApplyDamage(1);
+        if (Player.Instance.canAttack)
+        {
+            ApplyDamage(1);
+        }
     }
 
     protected virtual void ApplyDamage (float player_damage)
