@@ -8,6 +8,8 @@ public class LevelManager : MonoBehaviour
 {
     private static LevelManager Instance;
 
+    public static Player PlayerInstance;
+
     [field: SerializeField] public static int Round { get; private set; }
     [field: SerializeField] public static int EndlessLoop { get; private set; }
     public static int TotalBubbleCount { get; set; }

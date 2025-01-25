@@ -3,7 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "SpawnRandomWeightedPoolEvent", menuName = "Scriptable Objects/SpawnRandomWeightedPoolEvent")]
+[CreateAssetMenu(fileName = "SpawnRandomWeightedPoolEvent", menuName = "Scriptable Objects/Level Events/SpawnRandomWeightedPoolEvent")]
 public class SpawnRandomWeightedPoolEvent : _LevelEvent
 {
     [SerializeField] private List<WeightedEvent> events;
