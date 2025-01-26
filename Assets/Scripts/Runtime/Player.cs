@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float AttackSpeed { get; set; } = 1;
     public float MaxTime { get; set; } = 20f;
     public bool CanAttack { get; private set; } = true;
+    public float Money { get; set; }
 
     public float HpPercent => Mathf.Max(0, CurrentHealth / MaxHealth);
 
