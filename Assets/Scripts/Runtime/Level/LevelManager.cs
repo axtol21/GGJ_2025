@@ -62,6 +62,7 @@ public class LevelManager : MonoBehaviour
     {
         Round++;
 
+        Player.Instance.AddMoney(200 + (EndlessLoop * Instance.levels.Count + Round) * 50);
         GameUI.Instance.EnterShop();
     }
 }
