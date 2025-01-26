@@ -1,9 +1,11 @@
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class PlayerHPBar : MonoBehaviour
 {
     [SerializeField] private RawImage hpBarImage;
+    [SerializeField] private TextMeshProUGUI hpbarText;
     [SerializeField] private float barWidth;
 
 #if UNITY_EDITOR
@@ -17,6 +19,7 @@ public class PlayerHPBar : MonoBehaviour
         if (Player.Instance != null)
         {
             percent = Player.Instance.HpPercent;
+            hpbarText.text = $"{Player.Instance.CurrentHealth:0}/{Player.Instance.MaxHealth:0}";
         }
 
         SetBarPercent(percent);
@@ -28,6 +31,7 @@ public class PlayerHPBar : MonoBehaviour
         barWidth = ((RectTransform)transform).rect.width;
 
         SetBarPercent(testPercent);
+        hpbarText.text = $"{100*testPercent:0}/100";
     }
 
     private void SetBarPercent(float percent)

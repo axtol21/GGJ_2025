@@ -7,6 +7,7 @@ public class IncreaseHp : _Upgrade
 
     public override void OnBuyFromShop()
     {
-        //LevelManager.PlayerInstance.
+        Player.Instance.MaxHealth += amount;
+        Player.Instance.CurrentHealth += amount;
     }
 }

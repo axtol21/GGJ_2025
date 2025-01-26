@@ -14,4 +14,17 @@ public class GameUI : MonoBehaviour
 
         LevelManager.StartLevel();
     }
+
+    public void ExitShop()
+    {
+        ShopScreen.SetActive(false);
+        GameScreen.SetActive(true);
+
+        LevelManager.StartLevel();
+    }
+
+    public void RerollShop()
+    {
+
+    }
 }

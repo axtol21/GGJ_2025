@@ -7,6 +7,6 @@ public class IncreaseAttack : _Upgrade
 
     public override void OnBuyFromShop()
     {
-        //LevelManager.PlayerInstance.
+        Player.Instance.AttackDamage += amount;
     }
 }
