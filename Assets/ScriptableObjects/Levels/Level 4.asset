@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c5f039af46bffd418be6c5e4762d840, type: 3}
-  m_Name: Level 4 (Boss)
+  m_Name: Level 4
   m_EditorClassIdentifier: 
   levelEvents:
-  - time: 1
-    levelEvent: {fileID: 11400000, guid: ffbef7762b9eee74782d6f9ed7e5e20d, type: 2}
+  - time: 0
+    levelEvent: {fileID: 11400000, guid: 0b7b6ff2ac1aaf64f82662e41c33a28c, type: 2}

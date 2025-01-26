@@ -52,7 +52,7 @@ public class Bubble : MonoBehaviour
 
         Player.Instance.CurrentHealth = Player.Instance.CurrentHealth - damageToDeal;
 
-        if (Player.Instance.CurrentHealth < 0)
+        if (Player.Instance.CurrentHealth <= 0)
         {
             GameUI.Instance.GameOver();
         }
