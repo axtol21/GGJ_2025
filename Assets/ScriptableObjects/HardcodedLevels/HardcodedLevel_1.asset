@@ -9,9 +9,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5f039af46bffd418be6c5e4762d840, type: 3}
-  m_Name: Level 2
+  m_Script: {fileID: 11500000, guid: fe432b01302cd9448bdc03556119ecef, type: 3}
+  m_Name: HardcodedLevel_1
   m_EditorClassIdentifier: 
-  levelEvents:
-  - time: 0
-    levelEvent: {fileID: 11400000, guid: 12fb3782f0fbda347ad8dbcc9913a0c3, type: 2}
+  bubblePrefab: {fileID: 6781609605500789619, guid: 45f21c9749bc46a46b0d09d4007ce100, type: 3}

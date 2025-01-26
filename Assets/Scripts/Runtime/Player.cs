@@ -47,7 +47,7 @@ public class Player : MonoBehaviour
         MaxHealth = 100;
         CurrentHealth = MaxHealth;
         AttackSpeed = 1;
-        AttackDamage = 1;
+        AttackDamage = 2;
         MaxTime = 20;
         Money = 0;
     }
