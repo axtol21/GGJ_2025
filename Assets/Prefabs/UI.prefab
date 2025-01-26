@@ -1229,7 +1229,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   StartScreen: {fileID: 8017573864463543020}
   GameScreen: {fileID: 324038290536306575}
-  ShopScreen: {fileID: 0}
+  ShopScreen: {fileID: 8437291868293723187}
   GameOverScreen: {fileID: 0}
 --- !u!1 &5681622487380109702
 GameObject:
