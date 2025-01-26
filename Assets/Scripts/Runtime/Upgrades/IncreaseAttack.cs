@@ -11,6 +11,6 @@ public class IncreaseAttack : _Upgrade
     }
     public override string GetDescription()
     {
-        return $"Increases attack by {amount}.";
+        return $"Increases damage dealt by {amount}.";
     }
 }

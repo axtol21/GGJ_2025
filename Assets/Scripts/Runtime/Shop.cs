@@ -45,4 +45,15 @@ public class Shop : MonoBehaviour
 
         RerollCost += 100;
     }
+
+    public void RemoveUpgradesFromShopPool(_Upgrade upgrade)
+    {
+        for (int i =  upgradePool.Count - 1; i >= 0; i--)
+        {
+            if (upgradePool[i].key == upgrade.key)
+            {
+                upgradePool.RemoveAt(i);
+            }
+        }
+    }
 }

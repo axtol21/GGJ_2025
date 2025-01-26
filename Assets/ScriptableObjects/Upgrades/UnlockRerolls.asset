@@ -9,12 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 452e52a70a58a3c45855c68339d2aaff, type: 3}
-  m_Name: IncreaseHp_Small
+  m_Script: {fileID: 11500000, guid: 6fa2d281a3f938c448710722beacbe14, type: 3}
+  m_Name: UnlockRerolls
   m_EditorClassIdentifier: 
-  key: hp
+  key: unlock_rerolls
   level: 0
-  displayName: health i
-  displayIcon: {fileID: 1939227269, guid: c369e733ff68de848b21bc8f72729807, type: 3}
-  baseCost: 50
-  amount: 25
+  displayName: rerolls
+  displayIcon: {fileID: 1528574216, guid: c369e733ff68de848b21bc8f72729807, type: 3}
+  baseCost: 1000

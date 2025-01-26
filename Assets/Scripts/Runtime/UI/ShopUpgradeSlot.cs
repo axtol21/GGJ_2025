@@ -12,7 +12,7 @@ public class ShopUpgradeSlot : MonoBehaviour
 
     public void BuyUpgrade()
     {
-        if (Player.Instance.Money > upgrade.baseCost)
+        if (Player.Instance.Money >= upgrade.baseCost)
         {
             Debug.Log($"Bought Upgrade: {upgrade.displayName}");
 
@@ -35,5 +35,6 @@ public class ShopUpgradeSlot : MonoBehaviour
         description.text = upgrade.GetDescription();
         var costStr = upgrade.baseCost.ToString();
         cost.text = $"<cspace=-0.5em><voffset=0.275em><sprite=\"1bit 16px icons part-2\" index=81></voffset>{costStr[0]}</cspace>{costStr[1..]}";
+        icon.sprite = upgrade.displayIcon;
     }
 }

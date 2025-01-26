@@ -8,6 +8,7 @@ public class GameUI : MonoBehaviour
     [SerializeField] private GameObject gameScreen;
     [SerializeField] private GameObject shopScreen;
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject rerollButton;
 
     [SerializeField] private Shop shop;
 
@@ -49,5 +50,15 @@ public class GameUI : MonoBehaviour
         shop.RerollCost = 0;
         shop.RerollShop();
         shopScreen.SetActive(true);
+    }
+
+    public void UnlockRerolls()
+    {
+        rerollButton.SetActive(true);
+    }
+
+    public void RemoveUpgradeFromShopPool(_Upgrade upgrade)
+    {
+        shop.RemoveUpgradesFromShopPool(upgrade);
     }
 }
