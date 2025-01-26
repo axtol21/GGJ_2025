@@ -4,10 +4,12 @@ public class GameUI : MonoBehaviour
 {
     public static GameUI Instance;
 
-    [SerializeField] private GameObject StartScreen;
-    [SerializeField] private GameObject GameScreen;
-    [SerializeField] private GameObject ShopScreen;
-    [SerializeField] private GameObject GameOverScreen;
+    [SerializeField] private GameObject startScreen;
+    [SerializeField] private GameObject gameScreen;
+    [SerializeField] private GameObject shopScreen;
+    [SerializeField] private GameObject gameOverScreen;
+
+    [SerializeField] private Shop shop;
 
     private void Awake()
     {
@@ -21,28 +23,31 @@ public class GameUI : MonoBehaviour
 
     public void StartGame()
     {
-        StartScreen.SetActive(false);
-        GameScreen.SetActive(true);
+        startScreen.SetActive(false);
+        gameScreen.SetActive(true);
 
         LevelManager.StartLevel();
     }
 
     public void ExitShop()
     {
-        ShopScreen.SetActive(false);
-        GameScreen.SetActive(true);
+        shopScreen.SetActive(false);
+        gameScreen.SetActive(true);
 
         LevelManager.StartLevel();
     }
 
     public void RerollShop()
     {
-
+        shop.RerollShop();
     }
 
     public void EnterShop()
     {
-        GameScreen.SetActive(false);
-        ShopScreen.SetActive(true);
+        gameScreen.SetActive(false);
+
+        shop.RerollCost = 0;
+        shop.RerollShop();
+        shopScreen.SetActive(true);
     }
 }

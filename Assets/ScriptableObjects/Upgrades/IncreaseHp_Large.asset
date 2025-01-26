@@ -12,7 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 452e52a70a58a3c45855c68339d2aaff, type: 3}
   m_Name: IncreaseHp_Large
   m_EditorClassIdentifier: 
-  displayName: Increase HP+
+  key: 
+  level: 0
+  displayName: health ii
   displayIcon: {fileID: 0}
   baseCost: 75
-  amount: 100
+  amount: 50

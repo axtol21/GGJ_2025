@@ -13,12 +13,13 @@ public class Player : MonoBehaviour
     public float MaxTime { get; set; } = 20f;
     public bool CanAttack { get; private set; } = true;
     public float Money { get; set; }
+    public int CurrentShopSize { get; set; } = 2;
 
     public float HpPercent => Mathf.Max(0, CurrentHealth / MaxHealth);
 
     public float LastAttackTime { get; private set; }
 
-    private List<_Upgrade> upgrades = new List<_Upgrade>();
+    private Dictionary<string, int> upgrades = new Dictionary<string, int>();
 
     private void Awake()
     {
@@ -28,6 +29,18 @@ public class Player : MonoBehaviour
         }
         Instance = this;
         CurrentHealth = MaxHealth;
+    }
+
+    public void AddUpgrade(_Upgrade upgrade)
+    {
+        if (upgrades.ContainsKey(upgrade.key))
+        {
+            upgrades[upgrade.key] += upgrade.level;
+        }
+        else
+        {
+            upgrades[upgrade.key] = upgrade.level;
+        }
     }
 
 }
