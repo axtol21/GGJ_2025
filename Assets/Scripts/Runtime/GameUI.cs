@@ -65,4 +65,11 @@ public class GameUI : MonoBehaviour
     {
         shop.RemoveUpgradesFromShopPool(upgrade);
     }
+
+    public void GameOver()
+    {
+        LevelManager.Reset();
+        gameScreen.SetActive(false);
+        gameOverScreen.SetActive(true);
+    }
 }

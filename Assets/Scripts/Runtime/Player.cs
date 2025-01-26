@@ -6,12 +6,11 @@ using System.Collections.Generic;
 public class Player : MonoBehaviour
 {
     public static Player Instance;
-    public float MaxHealth { get; set; } = 100f;
+    public float MaxHealth { get; set; }
     public float CurrentHealth { get; set; }
-    public float AttackDamage { get; set; } = 1;
-    public float AttackSpeed { get; set; } = 1;
-    public float MaxTime { get; set; } = 20f;
-    public bool CanAttack { get; private set; } = true;
+    public float AttackDamage { get; set; }
+    public float AttackSpeed { get; set; }
+    public float MaxTime { get; set; }
     public float Money { get; set; }
     public int CurrentShopSize { get; set; } = 2;
 
@@ -28,7 +27,7 @@ public class Player : MonoBehaviour
             Destroy(Instance);
         }
         Instance = this;
-        CurrentHealth = MaxHealth;
+        Reset();
     }
 
     public void AddUpgrade(_Upgrade upgrade)
@@ -43,4 +42,13 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void Reset()
+    {
+        MaxHealth = 100;
+        CurrentHealth = MaxHealth;
+        AttackSpeed = 1;
+        AttackDamage = 1;
+        MaxTime = 20;
+        Money = 0;
+    }
 }
