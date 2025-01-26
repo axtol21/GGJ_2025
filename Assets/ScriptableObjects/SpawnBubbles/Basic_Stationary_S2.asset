@@ -16,4 +16,5 @@ MonoBehaviour:
   health: 2
   size: 2
   speed: 0
-  damageToDeal: 1
+  time: 4
+  damageToDeal: 2

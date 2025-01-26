@@ -10,13 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1e202a9154f50154baa407ad4f9c83ad, type: 3}
-  m_Name: RandomStationaryPool_0
+  m_Name: RandomStationaryPool_1
   m_EditorClassIdentifier: 
   events:
-  - weight: 3
+  - weight: 1
+    levelEvent: {fileID: 11400000, guid: ee3c2e51509f7fa4d84a1d958e90a041, type: 2}
+  - weight: 1
     levelEvent: {fileID: 11400000, guid: bd78f56f20df6ff4ba67b5ed7b7277eb, type: 2}
-  - weight: 2
-    levelEvent: {fileID: 11400000, guid: 79fc87d529f176d4f986b93260f4e8da, type: 2}
-  - weight: 2
+  - weight: 1
     levelEvent: {fileID: 11400000, guid: 425871077aba5da4da7c99567f0f3a4c, type: 2}
-  totalWeight: 7
+  - weight: 2
+    levelEvent: {fileID: 11400000, guid: 9c10c9e438a2cdc4e8d232c7298876bb, type: 2}
+  totalWeight: 5

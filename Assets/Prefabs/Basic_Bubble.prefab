@@ -138,9 +138,93 @@ MonoBehaviour:
   size: 1
   health: 1
   time: 10
+  damageToDeal: 1
+  xAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: -11.081031
+      outSlope: -11.081031
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.03432837
+      value: 0.61960626
+      inSlope: -3.4304805
+      outSlope: -3.4304805
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.18247566
+      value: 1.2447982
+      inSlope: 0.6590725
+      outSlope: 0.6590725
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.38161063
+      value: 0.66692346
+      inSlope: -0.4329995
+      outSlope: -0.4329995
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.5820477
+      value: 1.0749985
+      inSlope: 0.92824155
+      outSlope: 0.92824155
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: -0.17944272
+      outSlope: -0.17944272
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  yAnimation:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 1
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
   collider: {fileID: 7321613720951478124}
-  renderer: {fileID: 0}
-  playerPrefab: {fileID: 6053237925694606601, guid: fe6619eb5593a674ba2ce64e8f36c335, type: 3}
+  renderer: {fileID: 6836192410665531947}
 --- !u!50 &6614527076591949644
 Rigidbody2D:
   serializedVersion: 5
@@ -167,7 +251,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &6921752429021341386
 GameObject:
   m_ObjectHideFlags: 0
@@ -210,7 +294,7 @@ CircleCollider2D:
   m_Enabled: 1
   serializedVersion: 3
   m_Density: 1
-  m_Material: {fileID: 0}
+  m_Material: {fileID: 6200000, guid: 8599dc16d74ef674789f5e69768dbda8, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0

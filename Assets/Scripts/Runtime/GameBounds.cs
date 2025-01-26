@@ -5,6 +5,7 @@ public class GameBounds : MonoBehaviour
     public static Rect Bounds {get; private set;}
 
     [SerializeField] private Camera mainCamera;
+    [SerializeField] private GameObject wallPrefab;
 
     void Awake()
     {
@@ -25,16 +26,16 @@ public class GameBounds : MonoBehaviour
     {
         var xMin = Bounds.xMin + edgeBuffer;
         var xMax = Bounds.xMax - edgeBuffer;
-        var yMin = Bounds.yMin - edgeBuffer;
-        var yMax = Bounds.yMax + edgeBuffer;
+        var yMin = Bounds.yMin + edgeBuffer;
+        var yMax = Bounds.yMax - edgeBuffer;
 
         return new Vector3(Random.Range(xMin, xMax), Random.Range(yMin, yMax), 0);
     }
 
-    private static void BuildWall(float xScale, float yScale, float xOffset, float yOffset)
+    private void BuildWall(float xScale, float yScale, float xOffset, float yOffset)
     {
-        var wall = new GameObject("Bounding Wall");
-        var wallCollider = wall.AddComponent<BoxCollider2D>();
+        var wall = Instantiate(wallPrefab);
+        var wallCollider = wall.GetComponent<BoxCollider2D>();
         wallCollider.size = new Vector2(xScale, yScale);
         wallCollider.offset = new Vector2(xOffset, yOffset);
     }

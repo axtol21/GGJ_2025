@@ -11,6 +11,10 @@ public class Bubble : MonoBehaviour
     public float health = 1.0f;
     public float time = 1.0f;
     public float damageToDeal = 1.0f;
+    [SerializeField] private AnimationCurve xAnimation;
+    [SerializeField] private AnimationCurve yAnimation;
+    private float animationTime = 1.0f;
+
     [SerializeField] private new Collider2D collider;
     [SerializeField] private new SpriteRenderer renderer;
 
@@ -18,6 +22,7 @@ public class Bubble : MonoBehaviour
     void Start()
     {
         StartCoroutine(TimeToPOP());
+        LevelManager.TotalBubbleCount += 1;
     }
 
     // Update is called once per frame
@@ -27,6 +32,10 @@ public class Bubble : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        animationTime += Time.deltaTime;
+        renderer.transform.localScale = new Vector3(xAnimation.Evaluate(animationTime), yAnimation.Evaluate(animationTime), 1);
+
     }
 
     private IEnumerator TimeToPOP()
@@ -46,8 +55,19 @@ public class Bubble : MonoBehaviour
     {
         if (Time.time - Player.Instance.LastAttackTime > 1 / Player.Instance.AttackSpeed)
         {
+            OnCollisionEnter2D(null);
             ApplyDamage(Player.Instance.AttackDamage);
         }
+    }
+
+    private void OnDestroy()
+    {
+        LevelManager.TotalBubbleCount -= 1;
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        animationTime = 0;
     }
 
     protected virtual void ApplyDamage(float damageAmount)

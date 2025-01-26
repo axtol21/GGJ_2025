@@ -9,12 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ed64b39f1c197694b96b3e3cea375de6, type: 3}
-  m_Name: Basic_Stationary_S1
+  m_Script: {fileID: 11500000, guid: 2c5f039af46bffd418be6c5e4762d840, type: 3}
+  m_Name: Level 4 (Boss)
   m_EditorClassIdentifier: 
-  bubblePrefab: {fileID: 6781609605500789619, guid: 45f21c9749bc46a46b0d09d4007ce100, type: 3}
-  health: 1
-  size: 1
-  speed: 0
-  time: 5
-  damageToDeal: 1
+  levelEvents:
+  - time: 1
+    levelEvent: {fileID: 11400000, guid: ffbef7762b9eee74782d6f9ed7e5e20d, type: 2}

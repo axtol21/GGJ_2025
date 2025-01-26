@@ -15,5 +15,6 @@ MonoBehaviour:
   bubblePrefab: {fileID: 6781609605500789619, guid: 45f21c9749bc46a46b0d09d4007ce100, type: 3}
   health: 1
   size: 4
-  speed: 4
-  damageToDeal: 1
+  speed: 2
+  time: 5
+  damageToDeal: 2

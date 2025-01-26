@@ -60,6 +60,7 @@ public class LevelManager : MonoBehaviour
     public static void CompleteLevel()
     {
         Round++;
+        StartLevel();
 
         // TODO: add player currency/unlocks to save
         // TODO: open shop UI

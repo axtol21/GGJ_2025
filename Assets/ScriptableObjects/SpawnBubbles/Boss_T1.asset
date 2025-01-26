@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ed64b39f1c197694b96b3e3cea375de6, type: 3}
-  m_Name: Basic_Stationary_S1
+  m_Name: Boss_T1
   m_EditorClassIdentifier: 
   bubblePrefab: {fileID: 6781609605500789619, guid: 45f21c9749bc46a46b0d09d4007ce100, type: 3}
-  health: 1
-  size: 1
-  speed: 0
-  time: 5
-  damageToDeal: 1
+  health: 20
+  size: 5
+  speed: 5
+  time: 15
+  damageToDeal: 50

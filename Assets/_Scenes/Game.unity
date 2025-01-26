@@ -498,12 +498,32 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7386707217130587092, guid: 926c3e83ea5fce042990db6fea04acf3, type: 3}
       propertyPath: levels.Array.size
-      value: 1
+      value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7386707217130587092, guid: 926c3e83ea5fce042990db6fea04acf3, type: 3}
+      propertyPath: 'levels.Array.data[0]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 3b80e0a2e43a5f1429d3346a05b34948, type: 2}
     - target: {fileID: 7386707217130587092, guid: 926c3e83ea5fce042990db6fea04acf3, type: 3}
       propertyPath: 'levels.Array.data[1]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 3b80e0a2e43a5f1429d3346a05b34948, type: 2}
+    - target: {fileID: 7386707217130587092, guid: 926c3e83ea5fce042990db6fea04acf3, type: 3}
+      propertyPath: 'levels.Array.data[2]'
+      value: 
+      objectReference: {fileID: 11400000, guid: b7ca87705b787d94b9a229dc7cd6a16b, type: 2}
+    - target: {fileID: 7386707217130587092, guid: 926c3e83ea5fce042990db6fea04acf3, type: 3}
+      propertyPath: 'levels.Array.data[3]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 0636ebcb16e16f744a5bb81ced3e8471, type: 2}
+    - target: {fileID: 7386707217130587092, guid: 926c3e83ea5fce042990db6fea04acf3, type: 3}
+      propertyPath: 'levels.Array.data[4]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 95b93215f595cf74f9720eb0aa3ee0f1, type: 2}
+    - target: {fileID: 7386707217130587092, guid: 926c3e83ea5fce042990db6fea04acf3, type: 3}
+      propertyPath: 'levels.Array.data[5]'
+      value: 
+      objectReference: {fileID: 11400000, guid: 73acc893d9c32cb4a97f27f6d5f55817, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -555,6 +575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mainCamera: {fileID: 963194227}
+  wallPrefab: {fileID: 5541786339861666997, guid: 8226e55c3b90c704bb818d1496b0ff4c, type: 3}
 --- !u!1001 &618819741111507191
 PrefabInstance:
   m_ObjectHideFlags: 0
