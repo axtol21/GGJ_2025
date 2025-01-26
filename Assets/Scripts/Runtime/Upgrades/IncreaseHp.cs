@@ -10,4 +10,9 @@ public class IncreaseHp : _Upgrade
         Player.Instance.MaxHealth += amount;
         Player.Instance.CurrentHealth += amount;
     }
+
+    public override string GetDescription()
+    {
+        return $"Increases maximum and current health by {amount}.";
+    }
 }

@@ -9,4 +9,8 @@ public class IncreaseAttack : _Upgrade
     {
         Player.Instance.AttackDamage += amount;
     }
+    public override string GetDescription()
+    {
+        return $"Increases attack by {amount}.";
+    }
 }

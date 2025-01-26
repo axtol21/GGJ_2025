@@ -18,13 +18,15 @@ public class PlayerMoneyCounter : MonoBehaviour
             money = Player.Instance.Money;
         }
 
-        text.text = money.ToString();
+        var moneyStr = money.ToString();
+        text.text = $"<cspace=-0.5em><voffset=0.275em><sprite=\"1bit 16px icons part-2\" index=81></voffset>{moneyStr[0]}</cspace>{moneyStr[1..]}";
     }
 
     private void OnValidate()
     {
         text = GetComponent<TextMeshProUGUI>();
 
-        text.text = testAmount.ToString();
+        var moneyStr = testAmount.ToString();
+        text.text = $"<cspace=-0.5em><voffset=0.275em><sprite=\"1bit 16px icons part-2\" index=81></voffset>{moneyStr[0]}</cspace>{moneyStr[1..]}";
     }
 }
