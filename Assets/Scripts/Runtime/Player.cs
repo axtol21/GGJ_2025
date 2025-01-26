@@ -9,7 +9,7 @@ public class Player : MonoBehaviour
     public float MaxHealth { get; set; } = 100f;
     public float CurrentHealth { get; set; }
     public float AttackDamage { get; set; } = 1;
-    public float AttackSpeed { get; set; } = 1;
+    public float AttackSpeed { get; set; } = 1f;
     public float MaxTime { get; set; } = 20f;
     public bool CanAttack { get; private set; } = true;
     public float Money { get; set; } = 1000;
@@ -17,7 +17,7 @@ public class Player : MonoBehaviour
 
     public float HpPercent => Mathf.Max(0, CurrentHealth / MaxHealth);
 
-    public float LastAttackTime { get; private set; }
+    public float LastAttackTime { get; set; }
 
     private Dictionary<string, int> upgrades = new Dictionary<string, int>();
 

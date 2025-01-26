@@ -53,7 +53,7 @@ public class Bubble : MonoBehaviour
 
     void OnMouseDown()
     {
-        if (Time.time - Player.Instance.LastAttackTime > 1 / Player.Instance.AttackSpeed)
+        if ((Time.time - Player.Instance.LastAttackTime) > (1 / Player.Instance.AttackSpeed))
         {
             OnCollisionEnter2D(null);
             ApplyDamage(Player.Instance.AttackDamage);

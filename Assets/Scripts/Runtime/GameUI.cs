@@ -12,6 +12,8 @@ public class GameUI : MonoBehaviour
 
     [SerializeField] private Shop shop;
 
+    public bool GameActive => gameScreen.activeSelf;
+
     private void Awake()
     {
         if (Instance != null)
@@ -61,4 +63,5 @@ public class GameUI : MonoBehaviour
     {
         shop.RemoveUpgradesFromShopPool(upgrade);
     }
+
 }

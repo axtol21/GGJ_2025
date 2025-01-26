@@ -17,4 +17,5 @@ MonoBehaviour:
   size: 1
   speed: 0
   time: 5
+  money: 3
   damageToDeal: 1
