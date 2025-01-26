@@ -45,14 +45,12 @@ public class CursorController : MonoBehaviour
             }
             else if (Time.time - lastFrame > ((1 / Player.Instance.AttackSpeed) / cursorTextures.Count))
             {
-                Debug.Log("Next FRAME!");
                 if (nextTexture < 10)
                 {
                     UnityEngine.Cursor.SetCursor(cursorTextures[nextTexture], Vector2.zero, CursorMode.Auto);
                     nextTexture++;
                 }
                 lastFrame = Time.time;
-
             }
 
         } else

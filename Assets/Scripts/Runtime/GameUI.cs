@@ -27,6 +27,7 @@ public class GameUI : MonoBehaviour
     public void StartGame()
     {
         startScreen.SetActive(false);
+        gameOverScreen.SetActive(false);
         gameScreen.SetActive(true);
 
         LevelManager.StartLevel();
