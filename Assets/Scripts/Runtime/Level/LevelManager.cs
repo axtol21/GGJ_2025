@@ -31,6 +31,7 @@ public class LevelManager : MonoBehaviour
     {
         Round = 0;
         EndlessLoop = 0;
+        Instance.StopAllCoroutines();
     }
 
     public static void ClearCoroutines()

@@ -50,9 +50,6 @@ public class Bubble : MonoBehaviour
             yield return new WaitForSeconds(time);
         }
 
-        flashRed.enabled = false;
-        renderer.color = Color.red;
-
         Player.Instance.CurrentHealth = Player.Instance.CurrentHealth - damageToDeal;
 
         if (Player.Instance.CurrentHealth < 0)
@@ -60,7 +57,7 @@ public class Bubble : MonoBehaviour
             GameUI.Instance.GameOver();
         }
 
-        DestroyBubble();
+        DestroyBubble(false);
     }
 
     void OnMouseDown()
@@ -73,7 +70,7 @@ public class Bubble : MonoBehaviour
             if (health <= 0 && !destroyed)
             {
                 Player.Instance.AddMoney(money);
-                DestroyBubble();
+                DestroyBubble(true);
             }
         }
     }
@@ -88,10 +85,12 @@ public class Bubble : MonoBehaviour
         health -= damageAmount;
     }
 
-    private void DestroyBubble()
+    private void DestroyBubble(bool playerDestroyed)
     {
         if (!destroyed)
         {
+            flashRed.enabled = false;
+            renderer.color = playerDestroyed ? Color.white : Color.red;
             destroyed = true;
             animator.SetTrigger("pop");
             LevelManager.TotalBubbleCount -= 1;
