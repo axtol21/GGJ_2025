@@ -17,4 +17,5 @@ MonoBehaviour:
   size: 5
   speed: 5
   time: 15
+  money: 50
   damageToDeal: 50
