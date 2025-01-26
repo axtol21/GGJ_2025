@@ -40,7 +40,11 @@ public class GameUI : MonoBehaviour
 
     public void RerollShop()
     {
-        shop.RerollShop();
+        if (Player.Instance.Money >= shop.RerollCost)
+        {
+            Player.Instance.Money -= shop.RerollCost;
+            shop.RerollShop();
+        }
     }
 
     public void EnterShop()

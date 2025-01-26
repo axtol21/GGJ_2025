@@ -2272,6 +2272,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2f10773c6ff574a41b33681f4126b31f, type: 2}
   - {fileID: 11400000, guid: f84b2891d68df5b4fbf961579e923d62, type: 2}
   - {fileID: 11400000, guid: a18adf1da2436dc4d8f60affb06edd8c, type: 2}
+  - {fileID: 11400000, guid: b02779ba5108a6f4781ea1f8fa7f0a3a, type: 2}
   rerollCostDisplay: {fileID: 2872040739063237560}
 --- !u!1 &8657864980344747959
 GameObject:

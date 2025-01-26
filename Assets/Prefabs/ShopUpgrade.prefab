@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 79024c790709bb649bba75059cda621e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  upgrade: {fileID: 11400000, guid: eb10e9e7569c97f4fbfb7b07bfd6028a, type: 2}
+  upgrade: {fileID: 11400000, guid: b02779ba5108a6f4781ea1f8fa7f0a3a, type: 2}
   displayName: {fileID: 1078987863287273960}
   description: {fileID: 3565269890527416018}
   cost: {fileID: 2596797822784999066}
@@ -196,7 +196,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 280771806, guid: 78a987316043c2641b38376571521e11, type: 3}
+  m_Sprite: {fileID: -1151514595, guid: c369e733ff68de848b21bc8f72729807, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <cspace=-0.5em><voffset=0.275em><sprite="1bit 16px icons part-2" index=81></voffset>1</cspace>00
+  m_text: <cspace=-0.5em><voffset=0.275em><sprite="1bit 16px icons part-2" index=81></voffset>2</cspace>000
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dd9c6ba3e9938d42b0d676974742850, type: 2}
   m_sharedMaterial: {fileID: 6743017737202133160, guid: 2dd9c6ba3e9938d42b0d676974742850, type: 2}
@@ -557,7 +557,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Increases attack by 3.
+  m_text: <size=80%>At the end of each round, have the option to double your money!
+    (Or lose it all...)</size>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 2dd9c6ba3e9938d42b0d676974742850, type: 2}
   m_sharedMaterial: {fileID: 6743017737202133160, guid: 2dd9c6ba3e9938d42b0d676974742850, type: 2}
@@ -596,7 +597,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
-  m_lineSpacing: 0
+  m_lineSpacing: -25
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -693,7 +694,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: damage ii
+  m_text: to the moon
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: cb48a6bd3faff07448d6adf62af7645b, type: 2}
   m_sharedMaterial: {fileID: -4164519784507157493, guid: cb48a6bd3faff07448d6adf62af7645b, type: 2}
@@ -732,7 +733,7 @@ MonoBehaviour:
   m_textAlignment: 65535
   m_characterSpacing: -5
   m_wordSpacing: -45
-  m_lineSpacing: 0
+  m_lineSpacing: -55
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
