@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2c5f039af46bffd418be6c5e4762d840, type: 3}
-  m_Name: Level 3
+  m_Script: {fileID: 11500000, guid: 452e52a70a58a3c45855c68339d2aaff, type: 3}
+  m_Name: IncreaseHp_XLarge
   m_EditorClassIdentifier: 
-  levelEvents:
-  - time: 0
-    levelEvent: {fileID: 11400000, guid: 0a4b16f9228ce364191604e09e856bed, type: 2}
+  key: hp
+  level: 0
+  displayName: health iii
+  displayIcon: {fileID: 1939227269, guid: c369e733ff68de848b21bc8f72729807, type: 3}
+  baseCost: 100
+  amount: 100

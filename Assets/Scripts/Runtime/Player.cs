@@ -12,6 +12,7 @@ public class Player : MonoBehaviour
     public float AttackSpeed { get; set; }
     public float MaxTime { get; set; }
     public float Money { get; set; }
+    public float MoneyMultiplier { get; set; }
     public int CurrentShopSize { get; set; } = 2;
 
     public float HpPercent => Mathf.Max(0, CurrentHealth / MaxHealth);
@@ -42,6 +43,11 @@ public class Player : MonoBehaviour
         }
     }
 
+    public void AddMoney(float amount)
+    {
+        Money += MoneyMultiplier * amount;
+    }
+
     public void Reset()
     {
         MaxHealth = 100;
@@ -50,5 +56,6 @@ public class Player : MonoBehaviour
         AttackDamage = 2;
         MaxTime = 20;
         Money = 0;
+        MoneyMultiplier = 1;
     }
 }

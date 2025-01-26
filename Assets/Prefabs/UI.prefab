@@ -2724,13 +2724,19 @@ MonoBehaviour:
   upgradePool:
   - {fileID: 11400000, guid: 5601ffc50a1299a418962e5e7019065a, type: 2}
   - {fileID: 11400000, guid: 1e9da234432f2664b99c44b4e91ba537, type: 2}
+  - {fileID: 11400000, guid: 62fdfd3bc0fd5a245875dfee23df6156, type: 2}
   - {fileID: 11400000, guid: 1b318e8982175bc429a8cb447fb4637b, type: 2}
   - {fileID: 11400000, guid: eb10e9e7569c97f4fbfb7b07bfd6028a, type: 2}
+  - {fileID: 11400000, guid: 348007e981b802e4794eada5d180507a, type: 2}
   - {fileID: 11400000, guid: 8c6f8a610685d59449cd1b3799bf45c5, type: 2}
   - {fileID: 11400000, guid: 2f10773c6ff574a41b33681f4126b31f, type: 2}
+  - {fileID: 11400000, guid: 0919fa3b6aab6a1478639f20e6c96623, type: 2}
   - {fileID: 11400000, guid: f84b2891d68df5b4fbf961579e923d62, type: 2}
   - {fileID: 11400000, guid: a18adf1da2436dc4d8f60affb06edd8c, type: 2}
   - {fileID: 11400000, guid: b02779ba5108a6f4781ea1f8fa7f0a3a, type: 2}
+  - {fileID: 11400000, guid: 592100c13af434a448292b56b4509fa4, type: 2}
+  - {fileID: 11400000, guid: fa7956ff33d87084aa19a919cf98efd1, type: 2}
+  - {fileID: 11400000, guid: f323e1d2761dfb8418fe06daa997d9c7, type: 2}
   rerollCostDisplay: {fileID: 2872040739063237560}
 --- !u!1 &8657864980344747959
 GameObject:

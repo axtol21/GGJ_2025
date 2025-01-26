@@ -28,6 +28,8 @@ public class Level : ScriptableObject
             yield return new WaitForSeconds(0.5f);
         }
 
+        yield return new WaitForSeconds(1);
+
         Debug.Log("LEVEL COMPLETE!");
 
         LevelManager.CompleteLevel();

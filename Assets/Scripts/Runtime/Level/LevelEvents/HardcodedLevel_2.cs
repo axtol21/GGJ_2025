@@ -22,7 +22,5 @@ public class HardcodedLevel_2 : _LevelEvent
             SpawnBubble(bubblePrefab, 1, 10, Random.Range(1f, 3f), 0, 10, 20);
             yield return new WaitForSeconds(2);
         }
-
-        yield break;
     }
 }

@@ -16,5 +16,5 @@ MonoBehaviour:
   level: 0
   displayName: speed ii
   displayIcon: {fileID: -643921652, guid: c369e733ff68de848b21bc8f72729807, type: 3}
-  baseCost: 100
+  baseCost: 75
   amount: 0.1

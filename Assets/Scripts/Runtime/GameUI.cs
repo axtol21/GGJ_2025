@@ -72,6 +72,13 @@ public class GameUI : MonoBehaviour
     public void GameOver()
     {
         LevelManager.Reset();
+        var bubbles = FindObjectsByType<Bubble>(FindObjectsSortMode.None);
+
+        for (int i = bubbles.Length - 1; i >= 0; i--)
+        {
+            Destroy(bubbles[i].gameObject);
+        }
+
         gameScreen.SetActive(false);
         gameOverScreen.SetActive(true);
     }

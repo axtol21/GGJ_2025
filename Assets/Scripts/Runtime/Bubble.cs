@@ -20,6 +20,7 @@ public class Bubble : MonoBehaviour
     [SerializeField] private new Collider2D collider;
     [SerializeField] private new SpriteRenderer renderer;
     [SerializeField] private Animator animator;
+    [SerializeField] private BubbleFlashRed flashRed;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -31,21 +32,32 @@ public class Bubble : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
         animationTime += Time.deltaTime;
         renderer.transform.localScale = new Vector3(xAnimation.Evaluate(animationTime), yAnimation.Evaluate(animationTime), 1);
-
     }
 
     private IEnumerator TimeToPOP()
     {
-        yield return new WaitForSeconds(time);
+        if (time > 3)
+        {
+            yield return new WaitForSeconds(time - 3);
+            flashRed.enabled = true;
+            yield return new WaitForSeconds(3);
+        }
+        else
+        {
+            flashRed.enabled = true;
+            yield return new WaitForSeconds(time);
+        }
+
+        flashRed.enabled = false;
+        renderer.color = Color.red;
+
         Player.Instance.CurrentHealth = Player.Instance.CurrentHealth - damageToDeal;
 
         if (Player.Instance.CurrentHealth < 0)
         {
-            // Game over
-            Debug.Log("Game OVER!");
+            GameUI.Instance.GameOver();
         }
 
         DestroyBubble();
@@ -60,11 +72,10 @@ public class Bubble : MonoBehaviour
 
             if (health <= 0 && !destroyed)
             {
-                Player.Instance.Money += money;
+                Player.Instance.AddMoney(money);
                 DestroyBubble();
             }
         }
-
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
