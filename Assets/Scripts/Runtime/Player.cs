@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     {
         MaxHealth = 100;
         CurrentHealth = MaxHealth;
-        AttackSpeed = 1;
+        AttackSpeed = 2;
         AttackDamage = 2;
         MaxTime = 20;
         Money = 0;

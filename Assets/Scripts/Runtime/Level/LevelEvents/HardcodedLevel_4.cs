@@ -10,7 +10,7 @@ public class HardcodedLevel_4 : _LevelEvent
     {
         yield return new WaitForSeconds(1);
 
-        SpawnBubble(bubblePrefab, 100, 10000, 10, 0, 120, 1000);
+        SpawnBubble(bubblePrefab, 200, 10000, 10, 0, 120, 1000);
 
         yield return new WaitForSeconds(5);
 
@@ -25,7 +25,7 @@ public class HardcodedLevel_4 : _LevelEvent
                 yield return new WaitForSeconds(1);
             }
 
-            yield return new WaitForSeconds(6);
+            yield return new WaitForSeconds(3);
         }
     }
 }

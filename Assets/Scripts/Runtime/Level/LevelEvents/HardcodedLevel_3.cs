@@ -29,15 +29,15 @@ public class HardcodedLevel_3 : _LevelEvent
             SpawnBubble(bubblePrefab, 15, 20, Random.Range(4f, 5f), 0, 20, 50);
             SpawnBubble(bubblePrefab, 15, 20, Random.Range(4f, 5f), 0, 20, 50);
 
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1);
 
             for (int j = 0; j < 3; j++)
             {
                 SpawnBubble(bubblePrefab, 1, 5, Random.Range(1f, 2f), 0, 5, 15);
-                yield return new WaitForSeconds(0.5f);
+                yield return new WaitForSeconds(1);
             }
 
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(3);
         }
     }
 }
