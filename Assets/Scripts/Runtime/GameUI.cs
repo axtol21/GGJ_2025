@@ -2,10 +2,22 @@ using UnityEngine;
 
 public class GameUI : MonoBehaviour
 {
+    public static GameUI Instance;
+
     [SerializeField] private GameObject StartScreen;
     [SerializeField] private GameObject GameScreen;
     [SerializeField] private GameObject ShopScreen;
     [SerializeField] private GameObject GameOverScreen;
+
+    private void Awake()
+    {
+        if (Instance != null)
+        {
+            Destroy(Instance);
+        }
+
+        Instance = this;
+    }
 
     public void StartGame()
     {
@@ -26,5 +38,11 @@ public class GameUI : MonoBehaviour
     public void RerollShop()
     {
 
+    }
+
+    public void EnterShop()
+    {
+        GameScreen.SetActive(false);
+        ShopScreen.SetActive(true);
     }
 }
