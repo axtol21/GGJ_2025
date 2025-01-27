@@ -11,6 +11,7 @@ public class BubbleFlashRed : MonoBehaviour
 
     void Start()
     {
+        AudioManager.Instance.CloseToPopSFX();
         speed = 1;
         startTime = Time.time;
     }
