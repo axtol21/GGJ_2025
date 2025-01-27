@@ -87,6 +87,7 @@ public class GameUI : MonoBehaviour
             Destroy(bubbles[i].gameObject);
         }
 
+        rerollButton.SetActive(false);
         gameScreen.SetActive(false);
         gameOverScreen.SetActive(true);
     }
