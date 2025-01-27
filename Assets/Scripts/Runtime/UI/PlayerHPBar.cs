@@ -25,6 +25,7 @@ public class PlayerHPBar : MonoBehaviour
         SetBarPercent(percent);
     }
 
+#if UNITY_EDITOR
     private void OnValidate()
     {
         hpBarImage = GetComponent<RawImage>();
@@ -33,6 +34,7 @@ public class PlayerHPBar : MonoBehaviour
         SetBarPercent(testPercent);
         hpbarText.text = $"{100*testPercent:0}/100";
     }
+#endif
 
     private void SetBarPercent(float percent)
     {
