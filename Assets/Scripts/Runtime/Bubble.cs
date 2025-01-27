@@ -51,6 +51,7 @@ public class Bubble : MonoBehaviour
         }
 
         Player.Instance.CurrentHealth = Player.Instance.CurrentHealth - damageToDeal;
+        AudioManager.Instance.TakeDamageSFX();
 
         if (Player.Instance.CurrentHealth <= 0)
         {
@@ -89,6 +90,7 @@ public class Bubble : MonoBehaviour
     {
         if (!destroyed)
         {
+            AudioManager.Instance.BubblePopSFX();
             flashRed.enabled = false;
             renderer.color = playerDestroyed ? Color.white : Color.red;
             destroyed = true;

@@ -26,6 +26,8 @@ public class GameUI : MonoBehaviour
 
     public void StartGame()
     {
+        AudioManager.Instance.SetRoundMusic();
+
         startScreen.SetActive(false);
         gameOverScreen.SetActive(false);
         gameScreen.SetActive(true);
@@ -35,6 +37,8 @@ public class GameUI : MonoBehaviour
 
     public void ExitShop()
     {
+        AudioManager.Instance.SetRoundMusic();
+
         shopScreen.SetActive(false);
         gameScreen.SetActive(true);
 
@@ -52,6 +56,8 @@ public class GameUI : MonoBehaviour
 
     public void EnterShop()
     {
+        AudioManager.Instance.SetShopMusic();
+
         gameScreen.SetActive(false);
 
         shop.RerollCost = 0;
@@ -71,6 +77,8 @@ public class GameUI : MonoBehaviour
 
     public void GameOver()
     {
+        AudioManager.Instance.SetMenuMusic();
+
         LevelManager.Reset();
         var bubbles = FindObjectsByType<Bubble>(FindObjectsSortMode.None);
 
